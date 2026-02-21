@@ -1,0 +1,51 @@
+functionsDirectory = "/home/kraven/Documents/floder 1/tseditorsmedia-react/netlify/functions"
+functionsDirectoryOrigin = "default"
+headersOrigin = "config"
+redirectsOrigin = "config"
+plugins = []
+
+[build]
+publish = "/home/kraven/Documents/floder 1/tseditorsmedia-react/dist"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "npm run build"
+functions = "/home/kraven/Documents/floder 1/tseditorsmedia-react/netlify/functions"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[functions]
+
+[functions."*"]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]

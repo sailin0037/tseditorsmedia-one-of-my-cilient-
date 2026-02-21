@@ -1,0 +1,47 @@
+/* 
+ * SmartScroll CSS - Production-ready scroll container styles
+ * Use with SmartScroll.js utility
+ */
+
+/* Base scroll container */
+.smart-scroll-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  contain: layout;
+}
+
+/* Disable smooth scroll to prevent JS/CSS conflicts */
+.smart-scroll-container {
+  scroll-behavior: auto !important;
+}
+
+/* Mobile optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .smart-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* High performance scrolling */
+.smart-scroll-container {
+  scrollbar-gutter: stable;
+  /* Enable GPU acceleration for smooth scrolling */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shifts during scroll */
+.smart-scroll-container.is-loading {
+  pointer-events: none;
+}
+
+/* Smooth scroll disabled globally when using SmartScroll JS */
+body.smart-scroll-active {
+  scroll-behavior: auto !important;
+}
+
+body.smart-scroll-active * {
+  scroll-behavior: auto !important;
+}
